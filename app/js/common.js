@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
 
-	$("#toggle_mnu").click(function(){
-		$(this).toggleClass("on");
-		$("#menu").slideToggle();
-		return false;
-	});
+	// $("#toggle_mnu").click(function(){
+	// 	$(this).toggleClass("on");
+	// 	$("#menu").slideToggle();
+	// 	return false;
+	// });
 	// $('.owl-carousel').owlCarousel({
 	//     loop:true,
 	//     margin:10,
@@ -28,7 +28,21 @@ $(document).ready(function() {
 	//         }
 	//     }
 	// });
-	$("input, select, textarea").jqBootstrapValidation();
+	// $("input, select, textarea").jqBootstrapValidation();
+
+	$(".search").click(function(){
+		$(".overlay-search").toggleClass("focus-search");
+		$("#search-inner").focus();
+
+	});
+	$(".search-close").click(function(){
+		$(".overlay-search").removeClass("focus-search");
+	});
+
+
+
+
+
 
 });
 

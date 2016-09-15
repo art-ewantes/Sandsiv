@@ -26,30 +26,216 @@ body {
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-  color: #6f3564;
+  color: #F4F4F4;
   outline: none;
   border: 1px solid #6f3564; }
 
 body input:required:valid,
 body textarea:required:valid {
-  color: #6f3564;
+  color: #F4F4F4;
   outline: none;
   border: 1px solid #6f3564; }
 
 a {
-  cursor: pointer !important; }
+  cursor: pointer !important;
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none;
+    color: inherit; }
+  a:active, a:focus {
+    outline: none;
+    text-decoration: none; }
 
 button {
   cursor: pointer !important; }
 
+h1 {
+  font-size: 2.1875em; }
+
+h2 {
+  font-size: 1.875em;
+  font-family: "RobotoRegular"; }
+
+p {
+  font-size: 1.1875em;
+  font-family: "HelveticaThin"; }
+
 .hidden {
   display: none; }
 
+.header_top_line {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #e10000;
+  padding: 15px 0 10px 0; }
+  .header_top_line .social {
+    display: inline-block; }
+    .header_top_line .social a {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 18px; }
+    .header_top_line .social img {
+      display: inline-block;
+      vertical-align: middle; }
+  .header_top_line .interface {
+    display: inline-block;
+    float: right; }
+    .header_top_line .interface a {
+      display: inline-block;
+      margin-right: 35px; }
+      .header_top_line .interface a span {
+        color: #fff;
+        font-size: 1.0625em;
+        font-family: "RobotoLight";
+        text-transform: capitalize;
+        font-weight: 300;
+        padding: 0 0 0 5px; }
+    .header_top_line .interface a + a {
+      margin-right: 0; }
+
+.navbar-header {
+  padding: 23px 0; }
+  .navbar-header img {
+    width: 279px;
+    height: 51px; }
+
+.navbar-default {
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-image: none; }
+  .navbar-default .navbar-nav {
+    padding: 43px 0;
+    float: right; }
+    .navbar-default .navbar-nav li {
+      padding-left: 20px;
+      padding-right: 20px; }
+      .navbar-default .navbar-nav li > a {
+        padding: 0;
+        color: #1c1c1c;
+        text-transform: uppercase;
+        font-family: "RobotoRegular";
+        font-size: 1.25em; }
+        .navbar-default .navbar-nav li > a:hover {
+          text-decoration: underline; }
+      .navbar-default .navbar-nav li:last-child {
+        padding-right: 0; }
+      .navbar-default .navbar-nav li:first-child {
+        padding-left: 0; }
+
+.overlay-search {
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in,height 0ms,width 0ms;
+  transition: opacity 200ms ease-in,height 0ms,width 0ms;
+  -webkit-transition-delay: 0ms,200ms,200ms;
+          transition-delay: 0ms,200ms,200ms;
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 0;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: height 0ms 200ms,opacity 200ms ease-in,visibility 200ms,width 0ms 200ms,-webkit-transform 200ms ease-in;
+  transition: height 0ms 200ms,opacity 200ms ease-in,visibility 200ms,width 0ms 200ms,-webkit-transform 200ms ease-in;
+  transition: height 0ms 200ms,opacity 200ms ease-in,transform 200ms ease-in,visibility 200ms,width 0ms 200ms;
+  transition: height 0ms 200ms,opacity 200ms ease-in,transform 200ms ease-in,visibility 200ms,width 0ms 200ms,-webkit-transform 200ms ease-in;
+  background: #1D1E25;
+  visibility: hidden;
+  z-index: 4;
+  cursor: pointer; }
+
+.overlay-search.focus-search {
+  opacity: 0.99;
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: height 0ms 0ms,opacity 200ms ease-out,visibility 0ms,width 0ms,-webkit-transform 200ms ease-out;
+  transition: height 0ms 0ms,opacity 200ms ease-out,visibility 0ms,width 0ms,-webkit-transform 200ms ease-out;
+  transition: height 0ms 0ms,opacity 200ms ease-out,transform 200ms ease-out,visibility 0ms,width 0ms;
+  transition: height 0ms 0ms,opacity 200ms ease-out,transform 200ms ease-out,visibility 0ms,width 0ms,-webkit-transform 200ms ease-out;
+  visibility: visible;
+  z-index: 3; }
+
+.search-close {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  font-size: 2.5em;
+  color: #F4F4F4;
+  cursor: pointer; }
+
+.overlay-search-form {
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+  padding: 7em 0; }
+  .overlay-search-form input {
+    display: block;
+    outline: none;
+    margin: 0 auto;
+    background-color: transparent;
+    border: transparent;
+    color: #F4F4F4;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%); }
+    .overlay-search-form input::-webkit-input-placeholder {
+      color: #F4F4F4; }
+    .overlay-search-form input:-moz-placeholder {
+      color: #F4F4F4; }
+    .overlay-search-form input::-moz-placeholder {
+      color: #F4F4F4; }
+    .overlay-search-form input:-ms-input-placeholder {
+      color: #F4F4F4; }
+
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .navbar-default .navbar-nav {
+    float: left;
+    padding: 30px 0; } }
+
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 991px) {
+  .navbar-default .navbar-nav li > a {
+    font-size: 1.1em; }
+  .overlay-search-form input {
+    font-size: 38px;
+    line-height: normal;
+    left: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; } }
+
 /* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .navbar-default .navbar-nav li {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 20px 0; }
+  .navbar-default .navbar-nav {
+    width: 100%;
+    display: block;
+    text-align: center; }
+  .overlay-search-form input {
+    font-size: 32px; } }
+
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .overlay-search-form input {
+    font-size: 28px; } }
+
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
@@ -59,6 +245,12 @@ button {
 @media only screen and (min-width: 992px) {
   /*#menu{
 	display: inline-block !important;
-}*/ }
+}*/
+  .overlay-search-form input {
+    width: 720px;
+    position: absolute;
+    margin: auto;
+    height: auto;
+    font-size: 48px; } }
 
 /* Large Devices, Wide Screens */
