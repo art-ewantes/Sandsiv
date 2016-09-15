@@ -1,0 +1,103 @@
+@import "bourbon/app/assets/stylesheets/bourbon"
+*
+	margin: 0
+	padding: 0
+
+
+
+=animation-delay($animation)
+	-webkit-animation-delay: $animation
+	-o-animation-delay: $animation
+	-moz-animation-delay: $animation
+	animation-delay: $animation
+
+=border-radius($border-radius)
+	-webkit-border-radius: $border-radius
+	-o-border-radius: $border-radius
+	-moz-border-radius: $border-radius
+	border-radius: $border-radius
+
+=placeholder ($placeholder) 
+	-webkit-input-placeholder: $placeholder
+	-moz-placeholder: $placeholder
+	-moz-placeholder: $placeholder
+	-ms-input-placeholder: $placeholder
+
+=transition($transition)
+	-webkit-transition: $transition
+	-moz-transition: $transition
+	-o-transition: $transition
+	transition: $transition
+
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+
+  &:-moz-placeholder
+    @content
+
+  &::-moz-placeholder
+    @content
+
+  &:-ms-input-placeholder
+    @content
+
+
++placeholder
+	color: #000
+
+
+
+
+body
+	font-family: "OpenSans", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+	background-color: #fff
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #6f3564
+	outline: none
+	border: 1px solid #6f3564
+body input:required:valid,
+body textarea:required:valid
+	color: #6f3564
+	outline: none
+	border: 1px solid #6f3564
+a
+	cursor: pointer !important
+button
+	cursor: pointer !important
+
+
+
+
+.hidden
+	display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "../css/media"
