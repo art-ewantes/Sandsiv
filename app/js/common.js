@@ -42,15 +42,27 @@ $(document).ready(function() {
 	    dots:false,
 	    responsive:{
 	        0:{
-	            items:1
+	            items:1,
+	            pagination: true,
+	            dots: true
 	        },
 	        600:{
 	            items:2,
 	            autoplay: true,
+	            pagination: true,
+	            dots: true
 	        },
 	        700:{
 	            items:3,
 	            autoplay: true,
+	            pagination: true,
+	            dots: true
+	        },
+	        900:{
+	            items:3,
+	            autoplay: true,
+	            pagination: false,
+	            dots: false
 	        },
 	        1200:{
 	        	items: 5,
