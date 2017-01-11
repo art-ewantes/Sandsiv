@@ -39,3 +39,15 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/HelveticaNeueCyr-Black/HelveticaNeueCyr-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Black/HelveticaNeueCyr-Black.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Black/HelveticaNeueCyr-Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "OpenSansSemiBold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/OpenSansSemiBold/OpenSansSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansSemiBold/OpenSansSemiBold.woff") format("woff"), url("../fonts/OpenSansSemiBold/OpenSansSemiBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "OpenSansLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"), url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype"); }

@@ -1,7 +1,7 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "My first project",
+  "description": "Sandsiv",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,9 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
-    "imagemin-pngquant": "^4.2.2"
+    "gulp-util": "^3.0.7",
+    "imagemin-pngquant": "^4.2.2",
+    "vinyl-ftp": "^0.5.0"
   },
   "dependencies": {
     "gulp-concat": "^2.6.0",

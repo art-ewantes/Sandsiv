@@ -49,9 +49,11 @@ $dark: #1c1c1c
 
 +placeholder
 	color: #000
+	font-family: "OpenSansLight"
 
 
-
+main
+	margin-top: 108px
 
 body
 	font-family: "OpenSans", sans-serif
@@ -65,14 +67,14 @@ body
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #F4F4F4
+	color: #000
 	outline: none
-	border: 1px solid #6f3564
+	border: 1px solid #000
 body input:required:valid,
 body textarea:required:valid
-	color: #F4F4F4
+	color: #000
 	outline: none
-	border: 1px solid #6f3564
+	border: 1px solid #000
 a
 	cursor: pointer !important
 	color: inherit
@@ -97,16 +99,31 @@ p
 	font-family: "HelveticaThin"
 
 
-.hidden
-	display: none
+
+.navbar-default
+	border-radius: 0 !important
 
 
+.castombar
+	.navbar-header
+		padding: 7px 0
+	.navbar-default .navbar-nav
+		padding: 25px 0
+	.navbar-default
+		border-radius: 0
+		border-bottom: 1px solid #f3f3f3
+	.navbar
+		margin-top: 0
+		transition: ease-out .5s
 .header_top_line
 	width: 100%
-	height: auto
+	height: 50px
+	visibility: visible
 	overflow: hidden
 	background-color: $main_color
 	padding: 15px 0 10px 0
+	transition: ease-out .40s
+	z-index: 100000
 	.social
 		display: inline-block
 		a
@@ -159,6 +176,22 @@ p
 		a + a
 			margin-right: 0
 
+
+.navbar
+	margin-bottom: 0
+	margin-top: 50px
+	z-index: 10
+	transition: ease-out .5s
+// .reloadcss
+
+.hidden_bar
+	// display: none
+	visibility: hidden
+	// position: absolute
+	overflow: hidden
+	height: 0
+	transition: ease-out .40s
+
 .navbar-header
 	padding: 23px 0
 	img
@@ -170,7 +203,7 @@ p
 	border-color: #fff
 	box-shadow: none
 	background-image: none
-	
+	border-bottom: 1px solid #e3e3e3
 	.navbar-nav
 		padding: 43px 0
 		float: right
@@ -248,7 +281,8 @@ p
 			color: #F4F4F4
 
 .slide_info
-	background-color: #fcfcfc
+	// background-color: #fcfcfc
+	background-color: transparent
 	margin-top: 50px
 	display: inline-block
 	vertical-align: middle
@@ -257,6 +291,7 @@ p
 	position: absolute
 	left: 0
 	z-index: 5
+	max-width: 450px
 	h3
 		display: block
 		border-top: 1px solid #000
@@ -301,6 +336,7 @@ p
 // 	display: block
 
 .main_carousel
+	margin-top: 159px
 	.owl-carousel 
 		.owl-item
 			height: auto
@@ -345,6 +381,10 @@ p
 		font-size: em(19px)
 		font-family: "HelveticaThin"
 	
+
+.content
+	margin-top: 0
+
 
 .item_grid
 	overflow: hidden
@@ -417,7 +457,7 @@ p
 		max-width: 900px
 		height: auto
 		margin: 0 auto
-		h1
+		h3
 			display: inline-block
 			vertical-align: middle
 			font-family: "RobotoRegular"
@@ -455,7 +495,7 @@ p
 	height: auto
 	padding: 50px 0 50px 0
 	background-color: #000
-	h1
+	h3
 		font-family: "RobotoRegular"
 		font-size: em(30px)
 		text-transform: uppercase
@@ -490,6 +530,10 @@ p
 				color: #d40f0f
 				font-family: "HelveticaMedium"
 				margin-right: 5px
+			strong
+				color: #d40f0f
+				font-family: "HelveticaMedium"
+				margin-right: 5px
 			&:last-child
 				margin-bottom: 0
 
@@ -501,6 +545,7 @@ p
 	text-transform: uppercase
 	text-align: center
 	margin-top: 40px
+	padding-top: 30px
 
 .why_siv
 	.info_block
@@ -512,12 +557,95 @@ p
 		// 	position: relative
 		// 	left: -65px
 
+.out_tech
+	width: 100%
+	height: auto
+	display: block
+	h2
+		text-align: center
+		text-transform: uppercase
+		color: #000
+		font-family: "RobotoRegular"
+		font-size: em(40px)
+		margin-bottom: 40px
+	p
+		display: block
+		font-size: em(20px)
+		color: #000
+		font-family: "HelveticaThin"
+		max-width: 900px
+		margin: 0 auto
+
+.out_tech
+	width: 100%
+	height: auto
+	overflow: hidden
+	position: relative
+
+.row_technology
+	display: block
+	width: 90%
+	margin: 50px auto 130px auto
+	position: relative
+	overflow: hidden
+
+.row_item
+	display: inline-block
+	width: auto
+	height: 100%
+	float: left
+	text-align: center
+	
+	.item_row_tech
+		border-right: 1px solid #e5e5e5
+		// border-left: 1px solid #e5e5e5
+		height: 100%
+		.tech_skills
+			display: block
+			width: auto
+			height: 100%
+			text-align: center
+			
+
+			span
+				text-transform: uppercase
+				font-size: em(18px)
+				font-family: "HelveticaMedium"
+				color: #000
+				display: block
+				margin: 25px auto 25px auto
+				max-width: 160px
+
+			img
+				max-width: 100%
+				height: auto
+		.non_border
+			border-right: none
+	h3
+		display: inline-block
+		text-transform: uppercase
+		color: #fff
+		font-family: "HelveticaMedium"
+		background-color: $main_color
+		margin: 0
+		padding: 15px 33px
+		margin-right: 24px
+		margin-left: 24px
+		font-size: em(20px)
+		margin-bottom: 50px
+
+
+
+
+
 .product_hub
 	width: 100%
 	height: auto
 	padding: 140px 0 0 0
 	background-color: #fff
-
+	.center_hub
+		.info_block
+			max-width: 470px !important
 	.hub
 		position: relative
 		width: 100%
@@ -533,21 +661,21 @@ p
 			height: auto
 			position: absolute
 			top: 0
-			h1
+			h2
 				font-size: em(22px)
 				font-family: "HelveticaMedium"
 				color: #000
 				text-transform: uppercase
 				margin: 0
 				padding-bottom: 5px
-			h2
+			h3
 				margin: 0
-				font-size: em(22px)
+				font-size: em(20px)
 				font-family: "HelveticaMedium"
 				color: #000 
 			p
 				font-family: "HelveticaThin"
-				font-size: em(22px)
+				font-size: em(20px)
 				color: $dark
 				margin-top: 30px
 
@@ -595,7 +723,11 @@ p
 	text-align: center
 
 
-
+	
+.navbar-default .navbar-nav li.current-menu-item > a
+	color: #e10000 
+.navbar-default .navbar-nav li.current_page_item > a
+	color: #e10000 
 .praise
 	display: block
 	width: 100%
@@ -619,7 +751,7 @@ p
 			font-size: em(20px)
 			color: #fff
 			max-width: 550px
-			h1
+			h3
 				text-transform: uppercase
 				margin: 0
 				font-size: em(20px)
@@ -635,7 +767,7 @@ p
 			color: #fff
 			max-width: 550px
 			float: right
-			h1
+			h3
 				text-transform: uppercase
 				margin: 0
 				font-size: em(20px)
@@ -646,11 +778,304 @@ p
 			p
 				font-size: em(20px)
 
+
+
+// who
+
+.who_siv
+	width: 100%
+	height: auto
+	overflow: hidden
+	h1
+		font-family: "RobotoRegular"
+		font-size: em(40px)
+		color: #000
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 80px
+
+.cont_team_item
+	h2
+		text-align: center
+		font-size: em(19px)
+		text-transform: uppercase
+		font-family: "HelveticaMedium"
+	span
+		display: block
+		font-size: em(19px)
+		font-family: "HelveticaThin"
+		text-align: center
+.team_row
+	width: 100%
+	height: auto
+	overflow: hidden
+	margin-bottom: 50px
+	.team_item
+		width: 260px
+		height: 334px
+		overflow: hidden
+		position: relative
+		margin: 0 auto
+		img
+			max-width: 100%
+			height: auto
+			object-fit: cover
+			text-align: center
+		.team_block
+			opacity: 0
+			transition: all 0.5s ease
+			&:hover
+				opacity: 1
+				// transform: rotateX(360deg)
+				transition: all 0.5s ease
+			.team_object_overlay
+				position: absolute
+				top: 0
+				left: 0
+				text-align: center
+				color: #fff
+				background-color: rgba(0,0,0,.8)
+				width: 100%
+				height: 100%
+				display: table
+				padding: 0 22px
+				cursor: pointer
+				&:hover
+
+				.cont
+					display: table-cell
+					vertical-align: middle
+					h2
+						font-family: "RobotoRegular"
+						letter-spacing: 2px
+						margin-bottom: 20px
+						text-transform: uppercase
+						font-size: em(20px)
+					span
+						font-size: em(18px)
+						font-family: "RobotoLight"
+						letter-spacing: 0.8px
+						display: block
+						margin-bottom: 20px
+					.social_team
+						.fa
+							font-size: em(18px)
+							margin: 0 5px
+							transition: ease-out .2s
+							color: #fff
+							&:hover
+								transition: ease-out .2s
+								color: $main_color
+						a
+							&:active,
+							&:focus,
+							&:visited
+								color: #fff
+
+.clients
+	margin-bottom: 150px
+	margin-top: 100px
+	h2
+		font-family: "RobotoRegular"
+		font-size: em(40px)
+		color: #000
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 80px
+
+.contact_us
+	margin: 20px 0 50px 0
+	h2
+		font-family: "RobotoRegular"
+		font-size: em(40px)
+		color: #000
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 80px
+		padding-top: 30px 
+	.form-group
+		display: block
+		width: 100%
+		height: auto
+		text-align: left
+		position: relative
+		float: left
+		.color_element
+			font-size: em(14px)
+			font-family: "OpenSans"
+			color: #888888
+			display: block
+			width: 100%
+			margin-bottom: 4px
+			span
+				font-size: em(19px)
+				color: #e74122
+		input, 
+		select,
+			max-width: 100%
+			height: 40px
+			border: 1px solid #e2e2e2
+			padding: 10px 10px
+			display: inline-block
+			width: 100%
+			max-width: 100%
+			vertical-align: top
+			position: relative
+		textarea
+			resize: none	
+			display: inline-block
+			vertical-align: top
+			// margin-bottom: 22px
+			height: 120px
+			width: 100%
+			border: 1px solid #e2e2e2
+			padding: 10px 10px
+			position: relative
+	button
+		display: block
+		width: 100%
+		text-transform: uppercase
+		color: #fff
+		font-family: "OpenSansSemiBold"
+		background-color: $main_color
+		border: none
+		padding: 13px 0
+.help-block
+	margin: 0
+	padding: 0
+	ul
+		margin: 0
+		padding: 0
+		list-style-position: inside
+		li
+			margin: 0
+			padding: 0
+
+
+
+
+.info_block
+	// max-width: 280px
+	height: auto
+	.info_block_item
+		margin-bottom: 30px
+		img,
+		span
+			display: inline-block
+			vertical-align: middle
+		span
+			max-width: 170px
+			text-align: left
+			margin-left: 20px
+			font-size: em(17px)
+			font-family: "HelveticaThin"
+			transition: ease-out .2s
+			&:hover
+				text-decoration: underline
+				transition: ease-out .2s
+				font-weight: 700
+				color: #000
+		a
+			
+			display: inline-block
+			
+			&:active,
+			&:focus,
+			&:visited
+				color: #000
+
+#map 
+	width: 100%
+	height: 360px
+            
+.contact
+	form
+		width: 750px
+		max-width: 100%
+		margin: 0 auto 70px auto
+		display: block
+	.info_block
+		text-align: center
+	.info_block_item 
+		img,
+		span
+			vertical-align: top	
+
 .parther
 	width: 100%
 	height: auto
 	background-color: #e10000
 	padding: 30px 0
+
+
+.our_title_parhter
+	width: 100%
+	height: auto
+	overflow: hidden
+	background-size: cover
+	background-position: center center
+	text-align: center
+	padding: 130px 0 250px
+	h1
+		font-family: "RobotoRegular"
+		color: #fff
+		font-size: em(63px)
+		max-width: 615px
+		margin: 0 auto 
+		text-transform: inherit
+		padding: 0
+	span
+		display: block
+		font-family: "RobotoRegular"
+		color: #fff
+		font-size: em(28px)
+		margin-top: 30px
+
+.contain_parther
+	text-align: center
+	width: 100%
+	height: auto
+	padding: 80px 0
+	h2
+		font-family: "RobotoRegular"
+		font-size: em(40px)
+		color: #1c1c1c
+		text-transform: uppercase
+		margin: 0
+		padding: 0
+	p
+		color: #030303
+		font-size: em(19px)
+		font-family: "HelveticaThin"
+		margin-top: 40px
+
+.contain_vision
+	width: 100%
+	height: auto
+	padding: 80px 0
+	h2
+		font-family: "RobotoRegular"
+		font-size: em(40px)
+		color: #1c1c1c
+		text-transform: uppercase
+		margin: 0
+		margin-bottom: 30px
+		padding: 0
+		text-align: center
+	.container_vision
+		max-width: 370px
+		margin-left: 80px
+		p
+			color: #030303
+			font-size: em(17px)
+			font-family: "HelveticaThin"
+			margin-top: 25px
+		h3
+			font-family: "RobotoRegular"
+			font-size: em(22px)
+			text-transform: uppercase
+			color: #000
+			
 // 	.item
 // 		display: block
 // 		img
@@ -677,6 +1102,66 @@ p
 				max-width: 100%
 				width: auto
 				height: auto
+
+.main_carousel
+	.owl-item 
+		display: block
+		height: 130px
+		.item
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+			width: 100%
+			text-align: center
+			img
+				display: inline-block
+				position: relative
+				vertical-align: middle
+				max-width: 100%
+				width: auto
+				height: auto
+
+
+
+.our_partners
+	width: 100%
+	height: auto
+	overflow: hidden
+	text-align: center
+	min-height: 300px
+	.owl-carousel .owl-item
+		height: auto
+	.owl-carousel .owl-item .item
+		height: 260px
+		padding: 10px 20px
+		border: 1px solid #e8e8e8
+		height: 260px
+		width: 260px
+		overflow: hidden
+		display: table
+		position: relative
+		margin: 0 auto 20px auto
+		span
+			display: block
+			width: 100%
+			position: absolute
+			top: 10px
+			left: 50%
+			transform: translateX(-50%)
+			color: #5e5e5e
+			font-size: em(23px)
+			text-transform: uppercase
+			font-family: "RobotoRegular"
+		img
+			vertical-align: middle
+	.item_partners_row
+		display: table-cell
+		vertical-align: middle
+		
+
+
+
+
 
 
 

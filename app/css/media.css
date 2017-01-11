@@ -36,6 +36,31 @@
 		border-bottom: 1px solid #d6d6d6;
 		padding-bottom: 30px;
 	}
+	.row_technology{
+		width: 100%;
+	}
+	.row_item h3{
+		font-size: 17px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.row_item .item_row_tech .tech_skills span{
+		font-size: 17px;
+	}
+	main{
+		margin-top: 230px;
+	}
+	.main_carousel{
+		margin-top: 230px;
+	}
+	.slide_img{
+		float: none;
+	}
+	.slide_info{
+		position: relative;
+		margin: 0 auto;
+		display: block;
+	}
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1170px) {
@@ -46,11 +71,35 @@
 	.item_business .content_item_grid p{
 		font-size: 1.1em;
 	}
+	.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+		background: #000;
+	}
+}
+@media only screen and (max-width : 996px){
+	.row_item{
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	.row_item .item_row_tech{
+		border-right: none;
+		border-bottom: 1px solid #e5e5e5;
+		margin-bottom: 30px
+	}
+	.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+		background: #000;
+	}
+	.contain_vision .container_vision{
+		margin-left: 0;
+	}
 }
 @media only screen and (max-width : 991px){
 
 	.navbar-default .navbar-nav li > a{
 		font-size: 1.1em;
+	}
+	main{
+		margin-top: 200px;
 	}
 	.overlay-search-form input{
 		font-size: 38px;
@@ -95,12 +144,31 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
 
+@media only screen and (max-width : 768px) {
+	.navbar-default .navbar-nav{
+		/*float: none;*/
+		margin: 0 auto;
+		padding: 15px 0;
+	}
+	.contain_vision .container_vision{
+		margin: 0 auto;
+		border-bottom: 1px solid #e8e8e8;
+		max-width: 100%;
+	}
+	.product_hub .hub .info_block{
+		top: -30px;
+	}
+	.navbar-header{
+		/*border-bottom: 1px solid #f3f3f3;*/
+	}
 	.navbar-default .navbar-nav li{
 		padding-left: 0;
 		padding-right: 0;
 		margin: 20px 0;
+	}
+	main{
+		margin-top: 100px;
 	}
 	.navbar-default .navbar-nav{
 		width: 100%;
@@ -133,6 +201,15 @@
 	.header_top_line .interface a + a{
 		margin-right: 15px;
 	}
+	.navbar-default .navbar-nav li + li{
+		margin: 20px 20px;
+	}
+}
+@media screen and (device-width: 768px) and (orientation: portrait){
+	.navbar-default .navbar-nav{
+		float: left;
+	}
+
 }
 @media only screen and (max-width : 680px){
 
